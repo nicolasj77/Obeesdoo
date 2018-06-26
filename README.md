@@ -11,16 +11,15 @@ Specific module for the Beescoop
 ##### 1) clone repos
 
 ```
-$ cd projects
-$ git clone https://github.com/beescoop/Obeesdoo.git obeesdoo -b 9.0 --depth 1
-$ git clone https://github.com/houssine78/vertical-cooperative.git vertical-cooperative -b 9.0 --depth 1
-$ git clone https://github.com/houssine78/addons.git houssine-addons -b 9.0 --depth 1
-$ git clone https://github.com/coopiteasy/procurement-addons procurement-addons -b 9.0 --depth 1
-$ git clone https://www.github.com/OCA/l10n-belgium -b 9.0 --depth 1
-$ git clone https://www.github.com/OCA/mis-builder -b 9.0 --depth 1
-$ git clone https://www.github.com/OCA/web -b 9.0 --depth 1
-$ git clone https://github.com/OCA/server-tools -b 9.0 --depth 1
-$ git clone https://github.com/OCA/reporting-engine -b 9.0 --depth 1
+git clone https://github.com/beescoop/Obeesdoo.git obeesdoo -b 9.0 --depth 1
+git clone https://github.com/houssine78/vertical-cooperative.git vertical-cooperative -b 9.0 --depth 1
+git clone https://github.com/houssine78/addons.git houssine-addons -b 9.0 --depth 1
+git clone https://github.com/coopiteasy/procurement-addons procurement-addons -b 9.0 --depth 1
+git clone https://www.github.com/OCA/l10n-belgium -b 9.0 --depth 1
+git clone https://www.github.com/OCA/mis-builder -b 9.0 --depth 1
+git clone https://www.github.com/OCA/web -b 9.0 --depth 1
+git clone https://github.com/OCA/server-tools -b 9.0 --depth 1
+git clone https://github.com/OCA/reporting-engine -b 9.0 --depth 1
 ```
 
 todo: setup git submodules
@@ -33,18 +32,18 @@ Download and install [wkhtmltopdf version 0.12.1](https://github.com/wkhtmltopdf
 
 
 ```
-$ createuser -d odoo
-$ createdb beescoop -o odoo
-$ gunzip <dump-file>.sql.gz
-$ psql beescoop < <dump-file>.sql
+createuser -d odoo
+createdb beescoop -o odoo
+gunzip <dump-file>.sql.gz
+psql beescoop < <dump-file>.sql
 ```
 
 ##### 4) deactivate cron jobs and mails 
 
 ```
-$ psql -d beescoop -c "UPDATE ir_cron SET active='f' WHERE active='t';"
-$ psql -d beescoop -c "update ir_mail_server set smtp_encryption='none', smtp_port=1025, smtp_host='localhost',smtp_user='', smtp_pass='';"
-$ psql -d beescoop -c "UPDATE fetchmail_server SET active='f', password='', server='localhost';"
+psql -d beescoop -c "UPDATE ir_cron SET active='f' WHERE active='t';"
+psql -d beescoop -c "update ir_mail_server set smtp_encryption='none', smtp_port=1025, smtp_host='localhost',smtp_user='', smtp_pass='';"
+psql -d beescoop -c "UPDATE fetchmail_server SET active='f', password='', server='localhost';"
 ```
 
 ##### 5) create odoo.conf

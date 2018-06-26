@@ -54,3 +54,8 @@ pip install --no-binary :all: psycopg2
 
 You should now be able to start a simple odoo instance with `./odoo/odoo.py`
 
+https://packages.ubuntu.com/xenial/amd64/libpng12-0/download
+https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb
+
+sudo dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
+sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
